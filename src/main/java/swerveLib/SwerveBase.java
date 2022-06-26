@@ -69,6 +69,13 @@ public class SwerveBase extends SubsystemBase {
         navX.reset();
     }
 
+    public void setThrottle(double driveSpeed, double turningSpeed) {
+        frontLeft.setThrottle(driveSpeed, turningSpeed);
+        frontRight.setThrottle(driveSpeed, turningSpeed);
+        backLeft.setThrottle(driveSpeed, turningSpeed);
+        backRight.setThrottle(driveSpeed, turningSpeed);
+    }
+
     /**
      * Stop the drivetrain motors.
      */

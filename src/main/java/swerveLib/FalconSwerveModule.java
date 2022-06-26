@@ -56,6 +56,16 @@ public class FalconSwerveModule {
     }
 
     /**
+     * Set the raw velocity of the module.
+     * @param driveSpeed - The velocity of the drive motor.
+     * @param turningSpeed - The velocity of the turning motor.
+     */
+    public void setThrottle(double driveSpeed, double turningSpeed) {
+        driveMotor.set(ControlMode.Velocity, driveSpeed);
+        turningMotor.set(ControlMode.Velocity, turningSpeed);
+    }
+
+    /**
      * Set velocity of the drive & turning motors to 0.
      */
     public void stop() {
